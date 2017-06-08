@@ -1,18 +1,15 @@
 package com.trevynmace.prescriptiontracker;
 
-import android.app.Notification;
 import android.app.NotificationManager;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -31,18 +28,8 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        Button notificationButton = (Button)findViewById(R.id.notification_button);
-        notificationButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                sendNotification();
+                Intent intent = new Intent(MainActivity.this, AddPrescriptionActivity.class);
+                MainActivity.this.startActivity(intent);
             }
         });
     }
@@ -56,7 +43,8 @@ public class MainActivity extends AppCompatActivity
                         .setContentText("CHUG DEM PILLZ!!!!!");
 
         NotificationManager mNotifyMgr = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        mNotifyMgr.notify(001, mBuilder.build());
+        double random = Math.random() * 1000;
+        mNotifyMgr.notify(((int) random), mBuilder.build());
     }
 
     @Override

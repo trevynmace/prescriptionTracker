@@ -2,4 +2,8 @@
     <string name="app_name">PrescriptionTracker</string>
     <string name="action_settings">Settings</string>
     <string name="Notify">Notify</string>
+    <string name="prescription_name">Prescription Name</string>
+    <string name="daily">Daily</string>
+    <string name="minutely">Minutely</string>
+    <string name="save">Save</string>
 </resources>
