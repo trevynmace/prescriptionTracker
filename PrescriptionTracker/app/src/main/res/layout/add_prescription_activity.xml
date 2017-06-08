@@ -6,39 +6,49 @@
               android:weightSum="1">
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/prescription_name"
         android:hint="@string/prescription_name"
         />
+
+    <!--
+        frequency after first reorder to reorder
+
+        date of first reorder, datepicker
+        time as well for when to pop up the notification
+
+        radio buttons will be weekly, monthly, 60 days, 90 days, 180 days, yearly
+    -->
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/frequency_radio_group">
         <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/daily_radio_button"
             android:text="@string/daily"
             android:checked="true"/>
         <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="109dp"
             android:layout_height="wrap_content"
             android:id="@+id/minutely_radio_button"
             android:text="@string/minutely"/>
     </RadioGroup>
 
-    <TimePicker
+    <!-- TODO: need a button to open this gerbage-->
+    <DatePicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/time_picker"/>
 
     <Button
+        android:id="@+id/save_prescription_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
-        android:id="@+id/save_prescription_button"
         android:text="@string/save"/>
 
 </LinearLayout>
