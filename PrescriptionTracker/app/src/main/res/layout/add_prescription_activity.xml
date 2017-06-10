@@ -3,7 +3,8 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:weightSum="1">
+              android:weightSum="1"
+              android:id="@+id/add_prescription_activity_layout">
 
     <EditText
         android:layout_width="match_parent"
@@ -38,11 +39,31 @@
             android:text="@string/minutely"/>
     </RadioGroup>
 
-    <!-- TODO: need a button to open this gerbage-->
-    <DatePicker
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/time_picker"/>
+        android:id="@+id/date_label"
+        android:text="@string/date_label"/>
+
+    <EditText
+        android:id="@+id/calendar_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/date_placeholder"
+        android:focusable="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_label"
+        android:text="@string/time_label"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_edit_text"
+        android:hint="@string/time_placeholder"
+        android:focusable="false"/>
 
     <Button
         android:id="@+id/save_prescription_button"
