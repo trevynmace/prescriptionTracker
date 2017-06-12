@@ -7,7 +7,7 @@
     <string name="minutely">Minutely</string>
     <string name="save">Save</string>
     <string name="date_label">Date to start reordering:</string>
-    <string name="date_placeholder">__/__/__</string>
     <string name="time_label">Time of day to remind:</string>
     <string name="time_placeholder">__:__</string>
+    <string name="date_placeholder">__/__/__</string>
 </resources>
